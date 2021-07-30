@@ -1,0 +1,82 @@
+<div class="lists row">
+ <div class="col-md-12 col-lg-12 col-xxl-6">  
+
+
+<nb-card class="list-card">
+    <nb-card-header><h5>Testimonials  </h5>
+         <a (click)="addTestimonial()" class="plus">
+            <ion-icon name="add-outline"></ion-icon>
+         </a>        
+        
+         <a  class="plus">
+            <ion-icon name="checkmark"></ion-icon>
+        </a>
+    
+        <a  class="plus">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </nb-card-header>
+
+
+    <nb-card-body>
+
+        <nb-list>
+            <nb-list-item>
+                <h6 style ='width:16rem'><ion-icon name="search-outline"></ion-icon></h6>
+                <span style ='width:36rem'><input type="text"  class="search-input" placeholder="Search by Name" [(ngModel)]="srchName" id="listSearch1"></span>
+               
+                <div>
+                <a (click)="resetSearch()">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                </a>   
+                </div>
+            </nb-list-item>    
+        </nb-list>
+
+
+
+        <nb-list>
+            <nb-list-item>
+                <h6 style="width:16rem">#</h6>
+                <h6 style="width:25rem">Name</h6>
+                <h6 style="width:30rem">Position</h6>
+                <h6 style="width:35rem">Organisation</h6>
+                <h6 style="width:40rem">Course_title</h6>
+        
+    
+            </nb-list-item>
+    
+        </nb-list>
+       
+        <nb-list cdkDropList (cdkDropListDropped)="onDrop($event)" >
+            <nb-list-item class="anchor" *ngFor="let testimonial of testimonials; let i=index;" cdkDrag>
+            <h7 style='width: 16rem'> {{i+1}}</h7>
+            <h7 style='width: 30rem'> {{testimonial.name}}</h7>
+            <h7 style='width: 35rem'> {{testimonial.position}}</h7>
+            <h7 style='width: 40rem'> {{testimonial.organisation}}</h7>
+            <h7 style='width: 45rem'> {{testimonial.course_title}}</h7>
+    
+            
+            <div>
+                <a class="plus">
+                    <ion-icon name="eye-outline "></ion-icon>
+                </a>
+
+               
+                <a (click)="editTestimonial(testimonial)" class="plus">
+                    <ion-icon name="create-outline"></ion-icon>
+                </a>
+                <a (click)="deleteTestimonial(testimonial)" class="plus">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </a>
+            </div>
+</nb-list-item>
+            </nb-list>
+       
+    </nb-card-body>
+</nb-card>
+ </div>
+</div>
+
+
+
