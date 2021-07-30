@@ -48,22 +48,23 @@ export class TestimonialsComponent implements OnInit {
       
     }
     addTestimonial(){
+      
       this.router.navigate(['../addtestimonial'], { relativeTo: this.route });
    }
    //delete
-   deleteStaff(staff){
+   deleteTestimonial(testimonial){
     // console.log('inside delete')
-    // localStorage.setItem("adminDeleteStaffID", staff._id.toString());
+    localStorage.setItem("adminDeleteTestimonialID", testimonial._id.toString());
      this.windowService.open(DeletetestimonialComponent,{ title: `delete Testimonial` });
 
    }
 
-   // viewCourse(course : any) {
-    //  localStorage.setItem("adminViewCourseID", course._id.toString());
+    viewTestimonial(testimonial : any) {
+     localStorage.setItem("adminViewTestimonialID", testimonial._id.toString());
      
-    // this.router.navigate(['../viewcourse'], { relativeTo: this.route });
+     this.router.navigate(['../viewtestimonial'], { relativeTo: this.route });
  
-  // }
+  }
    
   
   editTestimonial(testimonial : any) {

@@ -9,6 +9,7 @@ import { TestimonialformComponent } from './testimonialform/testimonialform.comp
 import { EdittestimonialComponent } from './edittestimonial/edittestimonial.component';
 import { TestService } from './test.service';
 import { DeletetestimonialComponent } from './deletetestimonial/deletetestimonial.component';
+import { ViewtestimonialComponent } from './viewtestimonial/viewtestimonial.component';
 
 
 const routes: Routes = [{
@@ -34,7 +35,11 @@ const routes: Routes = [{
       component:DeletetestimonialComponent,
     },
     
-
+    {
+      path: 'viewtestimonial',
+      component:ViewtestimonialComponent,
+    },
+    
 
     {
       path: 'users',
