@@ -21,8 +21,14 @@
       <textarea   rows="5" cols="94" class='width-100' id="testimonial" name="testimonial" [(ngModel)]="testimonialItem.testimonial" ></textarea>
       </div>
     
-    <label for=""class="label col-lg-2 col-form-label">Course_Title</label><br>
-    <input class="form-control col-lg-10" type="text"name="course_title" id="course_Title" [(ngModel)]="testimonialItem.course_title" placeholder="course">
+      <label for="" class="label col-lg-2 col-form-label">Course_title :</label><br>
+      <select class="form-control col-lg-10 " [(ngModel)]="testimonialItem.course_title" name="course_title" id="course_title" placeholder="Course_title" required > 
+          <option selected>--Choose--</option>
+          <option value="Full Stack Developer">Full Stack Develoment</option> 
+          <option value="Software Testing">Software Testing</option> 
+          <option value="Data Science And Analytics">Data Science And Analytics</option> 
+          <option value="Digital Marketting">Digital Marketting</option>
+      </select>
     
     <label for=""class="label col-lg-2 col-form-labe">Image</label>
     <input class="form-control" type="file" name="image" id="image" (change)="updateImage($event)" [(ngModel)]="testimonialItem.image"   placeholder="Image Url"><br>

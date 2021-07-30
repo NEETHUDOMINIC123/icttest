@@ -5,16 +5,16 @@
    
     <form action="" #testimonialForm="ngForm" (ngSubmit)="addTestimonial()"  >
    
-      <label for="" class="label col-lg-2 col-form-label">Name :</label>
+      <label for="" class="label col-lg-2 col-form-label">Name :</label><br>
     <input class="form-control col-lg-10" type="text" name="name" id="name" [(ngModel)]="testimonialDetails.name"placeholder="name" required> 
      
-    <label for=""class="label col-lg-2 col-form-label">Position :</label>
+    <label for=""class="label col-lg-2 col-form-label">Position :</label><br>
     <input class="form-control col-lg-10" type="text" name="position" id="position" [(ngModel)]="testimonialDetails.position" placeholder="Position" required >
     
-    <label for=""class="label col-lg-2 col-form-label">Organisation :</label>
+    <label for=""class="label col-lg-2 col-form-label">Organisation :</label><br>
     <input class="form-control col-lg-10" type="text"name="organisation" id="organisation" [(ngModel)]="testimonialDetails.organisation" placeholder="Organization" required>
     
-    <label for=""class="label col-lg-2 col-form-label">Testimonial :</label>
+    <label for=""class="label col-lg-2 col-form-label">Testimonial :</label><br>
     <div class=" col-lg-10">
       <textarea rows="6" cols="95" class='width-100' id="testimonial" name="testimonial" [(ngModel)]="testimonialDetails.testimonial" ></textarea>
       </div> 
@@ -22,8 +22,10 @@
         <label for="" class="label col-lg-2 col-form-label">Course_title :</label><br>
         <select class="form-control col-lg-10 " [(ngModel)]="testimonialDetails.course_title" name="course_title" id="course_title" placeholder="Course_title" required > 
             <option selected>--Choose--</option>
-            <option value="Full Stack Developer">Full Stack Developer</option> 
-            <option value="RPA">RPA</option> 
+            <option value="Full Stack Developer">Full Stack Develoment</option> 
+            <option value="Software Testing">Software Testing</option> 
+            <option value="Data Science And Analytics">Data Science And Analytics</option> 
+            <option value="Digital Marketting">Digital Marketting</option>
         </select>
         
     <label for=""class="label col-lg-2 col-form-labe">Image :</label><br>

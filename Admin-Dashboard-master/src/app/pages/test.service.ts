@@ -26,6 +26,11 @@ export class TestService {
     return this.http.get("http://localhost:5000/testimonials");
   }
 
+  updateTestimonialIndex(testimonial:any){
+    return this.http.put("http://localhost:5000/Testimonials/updateIndex/",testimonial);
+  };
+
+
   newTestimonial(image:any,item:any)
   {   
 

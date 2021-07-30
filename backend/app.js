@@ -150,22 +150,7 @@ app.post('/testimonial/updateWithFile',(req,res)=>{
 });
 });
 
- //udating index
- app.put('/Testimonials/updateIndex',(req,res)=>{
-  res.header("Access-Control-Allow-Origin","*")
-  res.header('Access-Control-Allow-Methods: GET, POST, PATCH,PUT,DELETE,OPTIONS');     
-  
-  id         = req.body._id;
-  title      = req.body.name;
-  index      = req.body.index;
-  console.log(`update of ${title} with value ${index}`);
-  TestimonialData.findByIdAndUpdate({"_id":id},
-                              {$set:{"index":index}})
- .then(function(){
-     res.send();
- })
 
-});
  //udating index
  app.put('/Testimonials/updateIndex',(req,res)=>{
   res.header("Access-Control-Allow-Origin","*")
